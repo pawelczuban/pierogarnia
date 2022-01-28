@@ -1,3 +1,4 @@
-# pierogarnia
+# Pierogarnia
 
-Run via IIS Express
+## How to start application?
+- Run via IIS Express
