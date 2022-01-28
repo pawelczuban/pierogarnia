@@ -1,0 +1,55 @@
+﻿@model Pierogarnia.Models.Contact
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Zamówienie";
+}
+<div class="container-fluid" m-3>
+    <h2>Wpisz dane zamówienia</h2>
+    <form asp-controller="Contact" asp-action="Add" method="post">
+        <div class="mb-3">
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="Name">Imię i nazwisko</label>
+            <input class="form-control" asp-for="Name" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Category" class="text-danger"></span>
+            <label asp-for="Category">Wybierz rodzaj pierogów</label>
+            <select asp-for="Category">
+                <option value="1">ruskie</option>
+                <option value="2">ze szpinakiem</option>
+                <option value="3">z kapustą i grzybami</option>
+                <option value="4">z mięsem</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+            <label asp-for="Quantity">Wybierz ilość sztuk</label>
+            <input class="form-control" asp-for="Quantity" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+            <label asp-for="BirthDate">Oczekiwany termin dostawy</label>
+            <input class="form-control" asp-for="BirthDate" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Address" class="text-danger"></span>
+            <label asp-for="Address">Wpisz swój adres</label>
+            <input class="form-control" asp-for="Address" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <label asp-for="Email">Email</label>
+            <input class="form-control" asp-for="Email" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Phone" class="text-danger"></span>
+            <label asp-for="Phone">Telefon</label>
+            <input class="form-control" asp-for="Phone" />
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+        </div>
+    </form>
+</div>
